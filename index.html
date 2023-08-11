@@ -9,30 +9,65 @@
         li{
             color: tomato;
         }
+        #fruits-tittle{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo minima sit, facilis consequatur aliquam nihil ex dolor corrupti voluptatibus atque dignissimos minus repellat et voluptas rem, expedita sapiente recusandae iusto?</p>
     </header>
     <main>
-        <h1>My Awesome DOM re baba</h1>
-        <ul>
-            <li>Jalali Set</li>
-            <li>Shafayet</li>
-            <li>Bonobas</li>
-        </ul>
+        <section>
+            <h1>My Awesome DOM re baba</h1>
+            <ul>
+                <li>Jalali Set</li>
+                <li>Shafayet</li>
+                <li>Bonobas</li>
+                <li>DOM re ba ba</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits-tittle">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-tittle">Places I like to visit</h1>
+            <ul>
+                <li class="important-places">Sundorbon</li>
+                <li class="important-places">Bandorbon</li>
+                <li class="important-places">Katabon</li>
+                <li class="other-places">Salbon</li>
+            </ul>
+        </section>
     </main>
     <script src="js/dom.js"></script>
     <script>
-        const student = {
-            name: 'abul',
-            id: 11,
-            study: function(time){
-                console.log(time, 'Study kortecy ');
-            }
+        const liCollaction = document.getElementsByTagName('li');
+        // console.log(liCollaction);
+        for(const li of liCollaction){
+            // console.log(li.innerText);
         }
-        console.log('Adding Js inside the HTML file');
+        const allHeadding = document.getElementsByTagName('h1');
+        for(const h1 of allHeadding){
+            // console.log(h1.innerText)
+        }
+        const fruitsTittle = document.getElementById('fruits-tittle');
+        fruitsTittle.innerText = 'Fruits Change by JS'
+
+        const places = document.getElementsByClassName('important-places')
+        for(const place of places){
+            console.log(place.innerText);
+        }
     </script>
 </body>
 </html>
