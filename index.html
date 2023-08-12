@@ -6,7 +6,7 @@
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="styles/style.css">
     <style>
-        li{
+        .fruits-container li{
             color: tomato;
         }
         #fruits-tittle{
@@ -32,8 +32,8 @@
                 <li>DOM re ba ba</li>
             </ul>
         </section>
-        <section>
-            <h1 id="fruits-tittle">Fruits I like</h1>
+        <section class="fruits-container">
+            <h1 id="fruits-tittle" class="some-class random-class blue-bg">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
                 <li>Banana</li>
@@ -57,16 +57,28 @@
         for(const li of liCollaction){
             // console.log(li.innerText);
         }
+        // option-1 : getElementsByTagName
         const allHeadding = document.getElementsByTagName('h1');
         for(const h1 of allHeadding){
             // console.log(h1.innerText)
         }
+
+        // option-2: getElementById
         const fruitsTittle = document.getElementById('fruits-tittle');
         fruitsTittle.innerText = 'Fruits Change by JS'
-
+        
+        // option-3: getElementsByClassName
         const places = document.getElementsByClassName('important-places')
         for(const place of places){
             console.log(place.innerText);
+        }
+
+        // option-4: querySelector ** only 1st element 
+        // option-5: querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-container li')
+        // console.log(someLi);
+        for(const li of someLi){
+            console.log(li.innerText);
         }
     </script>
 </body>
