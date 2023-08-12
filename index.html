@@ -22,7 +22,7 @@
         <h1>Welcome to my DOM</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo minima sit, facilis consequatur aliquam nihil ex dolor corrupti voluptatibus atque dignissimos minus repellat et voluptas rem, expedita sapiente recusandae iusto?</p>
     </header>
-    <main>
+    <main id="main-container">
         <section>
             <h1>My Awesome DOM re baba</h1>
             <ul>
@@ -40,9 +40,9 @@
                 <li>Carrot</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="places-tittle">Places I like to visit</h1>
-            <ul>
+            <ul id="places-list">
                 <li class="important-places">Sundorbon</li>
                 <li class="important-places">Bandorbon</li>
                 <li class="important-places">Katabon</li>
@@ -51,6 +51,9 @@
         </section>
     </main>
     <script src="js/dom.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleInJs.js"></script>
+
     <script>
         const liCollaction = document.getElementsByTagName('li');
         // console.log(liCollaction);
@@ -70,7 +73,7 @@
         // option-3: getElementsByClassName
         const places = document.getElementsByClassName('important-places')
         for(const place of places){
-            console.log(place.innerText);
+            // console.log(place.innerText);
         }
 
         // option-4: querySelector ** only 1st element 
@@ -78,7 +81,7 @@
         const someLi = document.querySelectorAll('.fruits-container li')
         // console.log(someLi);
         for(const li of someLi){
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
     </script>
 </body>
